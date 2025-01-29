@@ -1,4 +1,4 @@
-    fvm flutter build web --web-renderer html --release --no-tree-shake-icons
+    fvm flutter build web --release --no-tree-shake-icons
     git push origin --delete gh-pages
     git add build/web/ -f
     git commit -m "publish new web version"

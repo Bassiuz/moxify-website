@@ -1,3 +1,4 @@
+import 'package:MoxifyMTG/app_router.gr.dart';
 import 'package:MoxifyMTG/copyright_notice.dart';
 import 'package:MoxifyMTG/privacy_policy.dart';
 import 'package:auto_route/auto_route.dart';
@@ -19,10 +20,15 @@ class _MyHomePageState extends State<MyHomePage> {
         // logo
         children: <Widget>[
           const SizedBox(height: 40),
-          Image.asset(
-            'assets/logo/moxify.png',
-            width: 100,
-            height: 100,
+          InkWell(
+            onTap: () {
+              context.router.push(const AppDeeplinkRoute());
+            },
+            child: Image.asset(
+              'assets/logo/moxify.png',
+              width: 100,
+              height: 100,
+            ),
           ),
           const SizedBox(height: 40),
 
