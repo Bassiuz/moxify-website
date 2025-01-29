@@ -1,12 +1,13 @@
+import 'package:MoxifyMTG/app_router.dart';
 import 'package:MoxifyMTG/theme/color_schemes.g.dart';
 import 'package:MoxifyMTG/theme/custom_color.g.dart';
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
 
 class MaterialThemeWrapper extends StatelessWidget {
-  const MaterialThemeWrapper({required this.child, super.key});
+  const MaterialThemeWrapper({required this.appRouter, super.key});
 
-  final Widget child;
+  final AppRouter appRouter;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class MaterialThemeWrapper extends StatelessWidget {
           darkScheme = darkColorScheme;
         }
 
-        return MaterialApp(
+        return MaterialApp.router(
           title: 'Moxify MTG - Collect - Scan - Track',
           theme: ThemeData(
             useMaterial3: true,
@@ -41,7 +42,8 @@ class MaterialThemeWrapper extends StatelessWidget {
             extensions: [darkCustomColors],
           ),
           themeMode: ThemeMode.dark,
-          home: child,
+          routerDelegate: appRouter.delegate(),
+          routeInformationParser: appRouter.defaultRouteParser(),
         );
       },
     );
