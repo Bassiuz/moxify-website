@@ -108,7 +108,7 @@ class _AppDeeplinkPageState extends State<AppDeeplinkPage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                GestureDetector(
+                                InkWell(
                                   onTap: () {
                                     launchUrl(
                                       Uri.parse(
@@ -124,7 +124,7 @@ class _AppDeeplinkPageState extends State<AppDeeplinkPage> {
                                     ),
                                   ),
                                 ),
-                                GestureDetector(
+                                InkWell(
                                   onTap: () {
                                     launchUrl(
                                       Uri.parse(
