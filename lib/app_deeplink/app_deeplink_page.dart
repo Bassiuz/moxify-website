@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+// ignore: unused_import
+import 'package:url_launcher_web/url_launcher_web.dart';
 
 @RoutePage()
 class AppDeeplinkPage extends StatefulWidget {
