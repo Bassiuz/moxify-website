@@ -1,10 +1,8 @@
 import 'package:MoxifyMTG/app_router.dart';
 import 'package:MoxifyMTG/theme/material_theme_wrapper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_web_plugins/url_strategy.dart';
 
 void main() {
-  usePathUrlStrategy();
   final appRouter = AppRouter();
 
   runApp(MyApp(appRouter: appRouter));
