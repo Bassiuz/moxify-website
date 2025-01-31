@@ -1,0 +1,9 @@
+[{
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "moxify",
+      "package_name": "com.bassiuz",
+      "sha256_cert_fingerprints":
+      ["15:90:82:D9:40:37:F2:C9:BF:F1:DF:18:B1:43:CB:09:54:99:16:61:31:69:F4:53:84:1F:46:E5:24:2D:F6:8F"]
+    }
+  }]
