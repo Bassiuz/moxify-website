@@ -76,12 +76,12 @@ class _AppDeeplinkPageState extends State<AppDeeplinkPage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      'Moxify MTG',
-                                      style: Theme.of(context).textTheme.headlineMedium,
+                                      'Moxify',
+                                      style: Theme.of(context).textTheme.headlineLarge,
                                     ),
                                     Text(
                                       'Collect - Scan - Track',
-                                      style: Theme.of(context).textTheme.headlineSmall,
+                                      style: Theme.of(context).textTheme.titleLarge,
                                     ),
                                   ],
                                 ),
