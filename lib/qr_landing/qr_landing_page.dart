@@ -4,7 +4,6 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:video_player/video_player.dart';
 
 @RoutePage()
 class QRLandingPage extends StatefulWidget {
@@ -16,7 +15,6 @@ class QRLandingPage extends StatefulWidget {
 
 class _QRLandingPageState extends State<QRLandingPage> {
   late String backdrop;
-  late VideoPlayerController _videoController;
 
   @override
   void initState() {
@@ -30,17 +28,6 @@ class _QRLandingPageState extends State<QRLandingPage> {
       'assets/backdrop/backdrop4.png',
       'assets/backdrop/backdrop5.png',
     ].elementAt(DateTime.now().second % 5);
-
-    // Initialize Video Player Controller
-    _videoController = VideoPlayerController.asset('assets/demo/demo.mp4')
-      ..initialize().then((_) {
-        // Ensure the first frame is shown
-        setState(() {});
-        // Mute, loop, and play the video
-        _videoController.setVolume(0);
-        _videoController.setLooping(true);
-        _videoController.play();
-      });
   }
 
   /// Helper function to launch URLs safely.
@@ -52,8 +39,7 @@ class _QRLandingPageState extends State<QRLandingPage> {
 
   @override
   void dispose() {
-    // Dispose the controller to free up resources
-    _videoController.dispose();
+    // No controller to dispose
     super.dispose();
   }
 
@@ -136,19 +122,15 @@ class _QRLandingPageState extends State<QRLandingPage> {
                             ),
                             const SizedBox(height: 24),
 
-                            // App Demo Video
-                            if (_videoController.value.isInitialized)
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: AspectRatio(
-                                  aspectRatio: _videoController.value.aspectRatio,
-                                  child: VideoPlayer(_videoController),
-                                ),
-                              )
-                            else
-                              const Center(
-                                child: CircularProgressIndicator(),
+                            // App Demo (as an animated WebP)
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                              child: Image.asset(
+                                'assets/demo/demo.webp',
+                                // You can optionally add fit: BoxFit.cover
+                                // if the aspect ratio isn't quite right.
                               ),
+                            ),
                             const SizedBox(height: 24),
 
                             // Discord Button
@@ -174,10 +156,9 @@ class _QRLandingPageState extends State<QRLandingPage> {
                               children: [
                                 InkWell(
                                   onTap: () {
-                                    launchUrl(
-                                      Uri.parse(
-                                        'https://apps.apple.com/nl/app/moxify-mtg/id6739588255?l=en-GB',
-                                      ),
+                                    _launchUrl(
+                                      // Use the helper
+                                      'https://apps.apple.com/nl/app/moxify-mtg/id6739588255?l=en-GB',
                                     );
                                   },
                                   child: SizedBox(
@@ -190,10 +171,9 @@ class _QRLandingPageState extends State<QRLandingPage> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                    launchUrl(
-                                      Uri.parse(
-                                        'https://play.google.com/store/apps/details?id=com.bassiuz.moxify',
-                                      ),
+                                    _launchUrl(
+                                      // Use the helper
+                                      'https://play.google.com/store/apps/details?id=com.bassiuz.moxify',
                                     );
                                   },
                                   child: SizedBox(
