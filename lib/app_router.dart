@@ -7,6 +7,7 @@ class AppRouter extends RootStackRouter {
   List<AutoRoute> get routes => [
         AutoRoute(initial: true, path: '/', page: MyHomeRoute.page),
         AutoRoute(path: '/app', page: AppDeeplinkRoute.page),
+        AutoRoute(path: '/loan', page: LoanLandingRoute.page),
         AutoRoute(path: '/qr', page: QRLandingRoute.page),
       ];
 }

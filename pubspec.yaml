@@ -16,7 +16,9 @@ dependencies:
     sdk: flutter
   google_fonts: ^6.2.1
   js: ^0.7.1
+  lzstring: ^2.0.0+2
   qr_flutter: ^4.1.0
+  scryfall_api: ^2.5.0
   url_launcher: ^6.3.1
   url_launcher_web: ^2.4.0
 
@@ -39,7 +41,10 @@ flutter:
         - asset: assets/fonts/SourceSerifItalic.ttf
           weight: 400
           style: italic
-
+    - family: NotoColorEmoji
+      fonts:
+        - asset: assets/fonts/NotoColorEmoji-Regular.ttf
+        
   assets:
     - assets/fonts/
     - assets/logo/
