@@ -9,5 +9,6 @@ class AppRouter extends RootStackRouter {
         AutoRoute(path: '/app', page: AppDeeplinkRoute.page),
         AutoRoute(path: '/loan', page: LoanLandingRoute.page),
         AutoRoute(path: '/qr', page: QRLandingRoute.page),
+        AutoRoute(path: '/extensions', page: ExtensionsRoute.page),
       ];
 }
