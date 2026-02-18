@@ -1,0 +1,12 @@
+{
+  "addons": {
+    "moxify-sync@moxifymtg.com": {
+      "updates": [
+        {
+          "version": "1.0.0",
+          "update_link": "https://moxifymtg.com/extensions/moxfield-sync-firefox.xpi"
+        }
+      ]
+    }
+  }
+}
