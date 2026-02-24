@@ -3,7 +3,7 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"flutter_bootstrap.js": "d08a2aa134472d06c734b1db10f685a8",
+const RESOURCES = {"flutter_bootstrap.js": "14de4f8f9c2d0cd3f362668aea2218d7",
 "version.json": "8ca5ac52b8c70eeb73a863d783f72667",
 "index.html": "24dda9a7d7987c8197399af3ccd58da6",
 "/": "24dda9a7d7987c8197399af3ccd58da6",
@@ -11,7 +11,7 @@ const RESOURCES = {"flutter_bootstrap.js": "d08a2aa134472d06c734b1db10f685a8",
 "CNAME": "952b2f557d6c2b4c5485a1579d5e5806",
 "main.dart.js": "c8c3c95f31c6452ff75423b9238452ae",
 ".well-known/apple-app-site-association": "9faf3c338ed2f084d0595ce130ebcd9e",
-".well-known/assetlinks.json": "680d63947527386c9236dc8d65ded044",
+".well-known/assetlinks.json": "7cd97c278d6eff75296cd0948d8d64ae",
 "flutter.js": "4b2350e14c6650ba82871f60906437ea",
 "extensions/moxfield-sync-firefox.zip": "06fcf0f377424fafcc845f0d47d064a4",
 "extensions/firefox-updates.json": "a1d4463eab12401dae9a08b37ce54044",
